@@ -86,7 +86,7 @@ void init_txters(t_textr **txtr, t_all *all)
 {
     int i;
     int x;
-    txtr->txt = malloc(sizeof(char *) * 5);
+    (*txtr)->txt = malloc(sizeof(char *) * 5);
     init_befor_init_hh(txtr);
     x = 0;
     i = 0;
@@ -133,7 +133,7 @@ void init_txters(t_textr **txtr, t_all *all)
         }
         i++;
     }
-    init_path(txtr);
+    init_path((*txtr));
     all->map = &all->map[x];
 }
 int check_errors(char **map)
